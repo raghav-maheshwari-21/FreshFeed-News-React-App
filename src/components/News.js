@@ -91,12 +91,12 @@ export class News extends Component {
           <a href="/"><img src="faviconNews.png" alt="" /></a><strong>आज की ताजा खबरें<img src="faviconNews.png" alt="" /></strong></h2></marquee>
         </div>
         <div className='mt-3 mb-3'style={{color:"white",fontFamily:"cursive",textAlign:"center"}}><h2><strong>{title=="general"?"":title.charAt(0).toUpperCase()+title.slice(1)+" News Headlines"}</strong></h2></div>
-        <InfiniteScroll
+        {/* <InfiniteScroll
           dataLength={this.state.articles.length}
           next={this.fetchMoreData}
           hasMore={this.state.articles.length !== this.state.totalResults}
           loader={<Spinner/>}
-        >
+        > */}
         <div className="container">
         <div className="row" >
         {this.state.loading && <Spinner/>}
@@ -114,7 +114,7 @@ export class News extends Component {
      </div> */}
         </div>
         </div>
-        </InfiniteScroll>
+        {/* </InfiniteScroll> */}
       </div>
     
      
